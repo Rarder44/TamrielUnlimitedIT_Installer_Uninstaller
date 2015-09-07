@@ -51,7 +51,7 @@ END_MESSAGE_MAP()
 CtestDlg::CtestDlg(CWnd* pParent /*=NULL*/,bool NoGUI)
 	: CDialogEx(IDD_TEST_DIALOG, pParent)
 {
-	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON1);
 	this->NoGUI = NoGUI;
 }
 
@@ -79,10 +79,9 @@ BOOL CtestDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	// Aggiungere la voce di menu "Informazioni su..." al menu di sistema.
 
-	// IDM_ABOUTBOX deve trovarsi tra i comandi di sistema.
-	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
+	
+	/*ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
 	CMenu* pSysMenu = GetSystemMenu(FALSE);
@@ -98,9 +97,9 @@ BOOL CtestDlg::OnInitDialog()
 			pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
 		}
 	}
+	*/
 
-	// Impostare l'icona per questa finestra di dialogo.  Il framework non esegue questa operazione automaticamente
-	//  se la finestra principale dell'applicazione non è una finestra di dialogo.
+
 	SetIcon(m_hIcon, TRUE);			// Impostare icona grande.
 	SetIcon(m_hIcon, FALSE);		// Impostare icona piccola.
 

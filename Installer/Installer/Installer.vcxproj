@@ -337,11 +337,14 @@
   <ItemGroup>
     <None Include="..\..\..\..\Source\Repos\InstallerDotNet\dotNetFx45_Full_setup.exe" />
     <None Include="..\..\..\..\Source\Repos\InstallerDotNet\Install.zip" />
+    <None Include="..\dotNetFx45_Full_setup.exe" />
+    <None Include="..\Install.zip" />
     <None Include="..\Temp.zip" />
     <None Include="res\Installer.rc2" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Installer.ico" />
+    <Image Include="res\Tamriel.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

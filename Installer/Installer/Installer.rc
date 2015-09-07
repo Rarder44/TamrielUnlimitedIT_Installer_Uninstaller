@@ -73,6 +73,7 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\Installer.ico"
+IDI_ICON1               ICON                    "res\\Tamriel.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -133,12 +134,12 @@ BEGIN
         BLOCK "041004b0"
         BEGIN
             VALUE "CompanyName", "Tamriel Unlimited IT"
-            VALUE "FileDescription", "Tamriel Unlimited IT"
+            VALUE "FileDescription", "Tamriel Unlimited IT Installer"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "Tamriel Unlimited IT.exe"
+            VALUE "InternalName", "Tamriel Unlimited IT Installer.exe"
             VALUE "LegalCopyright", "Tamriel Unlimited IT.  Tutti i diritti riservati."
-            VALUE "OriginalFilename", "Tamriel Unlimited IT.exe"
-            VALUE "ProductName", "Tamriel Unlimited IT"
+            VALUE "OriginalFilename", "Tamriel Unlimited IT Installer.exe"
+            VALUE "ProductName", "Tamriel Unlimited IT Installer"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END

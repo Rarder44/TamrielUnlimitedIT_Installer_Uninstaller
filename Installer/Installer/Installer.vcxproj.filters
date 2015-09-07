@@ -189,9 +189,14 @@
     <None Include="..\Temp.zip" />
     <None Include="..\..\..\..\Source\Repos\InstallerDotNet\Install.zip" />
     <None Include="..\..\..\..\Source\Repos\InstallerDotNet\dotNetFx45_Full_setup.exe" />
+    <None Include="..\dotNetFx45_Full_setup.exe" />
+    <None Include="..\Install.zip" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Installer.ico">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="res\Tamriel.ico">
       <Filter>File di risorse</Filter>
     </Image>
   </ItemGroup>
