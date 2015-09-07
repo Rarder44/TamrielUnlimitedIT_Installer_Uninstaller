@@ -37,3 +37,6 @@
 /Installer/Installer/Debug/Installer.tlog
 /Installer/Debug
 /Installer/Installer/Debug
+/Uninstaller/Uninstaller/x64/Release
+*.ipdb
+*.iobj
