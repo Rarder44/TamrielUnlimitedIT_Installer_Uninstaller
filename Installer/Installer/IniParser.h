@@ -24,9 +24,9 @@ public:
 
 
 
-	StringPath UnistallCommand = "";
-	String UnistallArgument = "";
-	bool UnistallBeforeInstall = true;
+	StringPath UninstallCommand = "";
+	String UninstallArgument = "";
+	bool UninstallBeforeInstall = true;
 
 
 
@@ -62,7 +62,7 @@ public:
 		3		=	Errore generico get versioni
 
 		4		=	stringa RegKey x get della InstallFolder non valida
-		5		=	Errore generico get unistall command
+		5		=	Errore generico get uninstall command
 
 		6		=	stringa file da copiare non valida
 		7		=	Errore generico get copy file list

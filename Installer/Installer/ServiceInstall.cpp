@@ -382,7 +382,7 @@ void ServiceInstall::UpdateGUI()
 
 void ServiceInstall::Update()
 {
-	if (ip->UnistallBeforeInstall)
+	if (ip->UninstallBeforeInstall)
 	{
 		String t = ip->OldInstallFolder;
 		t.Trim();
@@ -397,10 +397,10 @@ void ServiceInstall::Update()
 		}
 		
 
-		ip->UnistallCommand.ReplaceAll("[InstallFolder]", t);
-		ip->UnistallCommand.RemoveDuplicateSlash();
+		ip->UninstallCommand.ReplaceAll("[InstallFolder]", t);
+		ip->UninstallCommand.RemoveDuplicateSlash();
 	
-		ReturnValue r = ServiceExecuteCommand::executeCommandLineSync(ip->UnistallCommand + " " + ip->UnistallArgument);
+		ReturnValue r = ServiceExecuteCommand::executeCommandLineSync(ip->UninstallCommand + " " + ip->UninstallArgument);
 
 		while (PathFileExists(ip->OldInstallFolder.lpcwstr()));
 		CreateDirectory(ip->OldInstallFolder.lpcwstr(), NULL);

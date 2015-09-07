@@ -15,6 +15,7 @@ LONG ServiceRegistry::GetDWORDRegKey(HKEY hKey, String strValueName, DWORD &nVal
 	{
 		nValue = nResult;
 	}
+
 	return nError;
 }
 LONG ServiceRegistry::GetDWORDRegKey(String hKey, String strValueName, DWORD &nValue, DWORD nDefaultValue)
@@ -23,6 +24,8 @@ LONG ServiceRegistry::GetDWORDRegKey(String hKey, String strValueName, DWORD &nV
 	LONG l = GetKey(hKey, key);
 	if (l == ERROR_SUCCESS)
 		return GetDWORDRegKey(key, strValueName,  nValue, nDefaultValue);
+	else
+		nValue = nDefaultValue;
 	return l;
 }
 
@@ -43,6 +46,8 @@ LONG ServiceRegistry::GetBoolRegKey(String hKey, String strValueName, bool &bVal
 	LONG l = GetKey(hKey, key);
 	if (l == ERROR_SUCCESS)
 		return GetBoolRegKey(key, strValueName, bValue, bDefaultValue);
+	else
+		bValue = bDefaultValue;
 	return l;
 }
 
@@ -65,6 +70,8 @@ LONG ServiceRegistry::GetStringRegKey(String hKey, String strValueName, String &
 	LONG l = GetKey(hKey, key);
 	if (l == ERROR_SUCCESS)
 		return GetStringRegKey(key, strValueName, strValue, strDefaultValue);
+	else
+		strValue = strDefaultValue;
 	return l;
 }
 
@@ -73,7 +80,7 @@ LONG ServiceRegistry::GetStringRegKey(String hKey, String strValueName, String &
 
 LONG ServiceRegistry::SetDWORDValue(HKEY hKey, String ValueName, DWORD data)
 {
-	return RegSetValueEx(hKey, ValueName.lpcwstr(), 0, REG_DWORD, (const BYTE*)data, sizeof(data));
+	return RegSetValueEx(hKey, ValueName.lpcwstr(), 0, REG_DWORD, (const BYTE*)&data, sizeof(data));
 }
 LONG ServiceRegistry::SetDWORDValue(String hKey, String ValueName, DWORD data)
 {
@@ -127,22 +134,26 @@ LONG ServiceRegistry::GetKey(String hKey, HKEY &hKeyOut)
 	if (hKey.StartWith("HKLM"))
 	{
 		hKey.RemoveStart("HKLM");
-		return RegOpenKey(HKEY_LOCAL_MACHINE, ServicePath::TrimLSlashes(hKey).lpcwstr(), &hKeyOut);
+		return RegOpenKeyEx(HKEY_LOCAL_MACHINE, ServicePath::TrimLSlashes(hKey).lpcwstr(), 0, KEY_ALL_ACCESS, &hKeyOut);
+
 	}
 	else if (hKey.StartWith("HKEY_LOCAL_MACHINE"))
 	{
 		hKey.RemoveStart("HKEY_LOCAL_MACHINE");
-		return RegOpenKey(HKEY_LOCAL_MACHINE, ServicePath::TrimLSlashes(hKey).lpcwstr(), &hKeyOut);
+		return RegOpenKeyEx(HKEY_LOCAL_MACHINE, ServicePath::TrimLSlashes(hKey).lpcwstr(), 0, KEY_ALL_ACCESS, &hKeyOut);
+
 	}
 	else if (hKey.StartWith("HKCU"))
 	{
 		hKey.RemoveStart("HKCU");
-		return RegOpenKey(HKEY_CURRENT_USER, ServicePath::TrimLSlashes(hKey).lpcwstr(), &hKeyOut);
+		return RegOpenKeyEx(HKEY_CURRENT_USER, ServicePath::TrimLSlashes(hKey).lpcwstr(), 0, KEY_ALL_ACCESS, &hKeyOut);
+	
 	}
 	else if (hKey.StartWith("HKEY_CURRENT_USER"))
 	{
 		hKey.RemoveStart("HKEY_CURRENT_USER");
-		return RegOpenKey(HKEY_CURRENT_USER, ServicePath::TrimLSlashes(hKey).lpcwstr(), &hKeyOut);
+		return RegOpenKeyEx(HKEY_CURRENT_USER, ServicePath::TrimLSlashes(hKey).lpcwstr(), 0, KEY_ALL_ACCESS, &hKeyOut);
+	
 	}
 	return -1;
 }

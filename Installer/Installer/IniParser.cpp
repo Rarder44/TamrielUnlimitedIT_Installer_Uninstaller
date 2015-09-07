@@ -47,7 +47,7 @@ void IniParser::Parse(String Path)
 		}
 
 
-		t = ini.FindIniSection("UNISTALL_COMMAND");
+		t = ini.FindIniSection("UNINSTALL_COMMAND");
 		if (t)
 		{
 			try
@@ -68,10 +68,10 @@ void IniParser::Parse(String Path)
 					Error = 4;
 					return;
 				}
-				UnistallCommand = t->GetKeyValue("UnistallCommand");
-				UnistallArgument = t->GetKeyValue("UnistallArgument");
-				String temp = t->GetKeyValue("UnistallBeforeInstall");
-				UnistallBeforeInstall = *temp.Trim() == "1";
+				UninstallCommand = t->GetKeyValue("UninstallCommand");
+				UninstallArgument = t->GetKeyValue("UninstallArgument");
+				String temp = t->GetKeyValue("UninstallBeforeInstall");
+				UninstallBeforeInstall = *temp.Trim() == "1";
 
 			}
 			catch (...)
@@ -382,12 +382,13 @@ void IniParser::Parse(String Path)
 					st.pop_front();
 
 					String str = st.front();
-					DWORD d = StrToIntW(str.Trim()->lpcwstr());
+					int d = StrToIntW(str.Trim()->lpcwstr());
 					st.pop_front();
 
-					DWORD out;
-					ServiceRegistry::GetDWORDRegKey(k, v, out, d);
-					DesktopLink = out;
+					unsigned long out;
+					ServiceRegistry::GetDWORDRegKey(k, v,out, d);
+
+					DesktopLink = (int)out;
 				}
 				else
 				{

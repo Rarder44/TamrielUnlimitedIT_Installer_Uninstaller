@@ -23,7 +23,7 @@
 
 
 CUninstallerDlg::CUninstallerDlg(CWnd* pParent /*=NULL*/)
-	: CDialogEx(IDD_UNISTALLER_DIALOG, pParent)
+	: CDialogEx(IDD_UNINSTALLER_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON1);
 }

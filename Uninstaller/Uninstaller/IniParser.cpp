@@ -43,7 +43,7 @@ void IniParser::Parse(String Path)
 		}
 
 
-		t = ini.FindIniSection("UNISTALL_TYPES");
+		t = ini.FindIniSection("UNINSTALL_TYPES");
 		if (t)
 		{
 			try
@@ -179,7 +179,7 @@ void IniParser::Parse(String Path)
 		}
 
 
-		t = ini.FindIniSection("RUN_BEFORE_UNISTALL");
+		t = ini.FindIniSection("RUN_BEFORE_UNINSTALL");
 		if (t)
 		{
 			try

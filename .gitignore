@@ -44,3 +44,8 @@
 *.ipch
 /Uninstaller/Uninstaller/Debug/Uninstaller.tlog
 /Uninstaller/Uninstaller/Debug
+/Installer/Install
+/Installer/Installer/Release/Installer.tlog
+/Installer/Installer/Release
+/Uninstaller/Uninstaller/Release/Uninstaller.tlog
+/Uninstaller/Uninstaller/Release

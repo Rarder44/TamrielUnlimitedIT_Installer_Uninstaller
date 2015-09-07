@@ -16,7 +16,7 @@ public:
 
 // Dati della finestra di dialogo
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_UNISTALLER_DIALOG };
+	enum { IDD = IDD_UNINSTALLER_DIALOG };
 #endif
 
 	protected:
