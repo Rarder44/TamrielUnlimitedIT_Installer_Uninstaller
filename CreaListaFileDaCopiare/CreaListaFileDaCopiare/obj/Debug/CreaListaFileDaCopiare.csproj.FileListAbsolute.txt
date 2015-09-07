@@ -1,0 +1,9 @@
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\bin\Debug\CreaListaFileDaCopiare.exe.config
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\bin\Debug\CreaListaFileDaCopiare.exe
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\bin\Debug\CreaListaFileDaCopiare.pdb
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.csprojResolveAssemblyReference.cache
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.Form1.resources
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.Properties.Resources.resources
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.csproj.GenerateResource.Cache
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.exe
+C:\Users\Luca\Source\Repos\InstallerDotNet\CreaListaFileDaCopiare\CreaListaFileDaCopiare\obj\Debug\CreaListaFileDaCopiare.pdb

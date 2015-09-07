@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classi">
+      <UniqueIdentifier>{358b2499-0276-4903-a779-ff88d14051c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{be8bd19b-4f4a-4049-9f52-7516b52c22a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\h">
+      <UniqueIdentifier>{0cc3b312-0b85-4527-a4e3-9015f9ead9bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\cpp">
+      <UniqueIdentifier>{3acbc204-6995-4fdc-99b7-65b76da871a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classi\h">
+      <UniqueIdentifier>{a476e29d-1038-44c2-9d33-847030493cb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classi\cpp">
+      <UniqueIdentifier>{2944d736-6d1b-49b3-aab9-709c87f6912e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Installer.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="InstallerDlg.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderDlg.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceInstall.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicePath.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceRegistry.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceResource.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceString.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceSystem.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceExecuteCommand.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceCheckVersion.h">
+      <Filter>Services\h</Filter>
+    </ClInclude>
+    <ClInclude Include="ReturnValue.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="AppVersion.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobVar.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFile.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="IniParser.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="unzip.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="StringPath.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+    <ClInclude Include="FileFolderGroup.h">
+      <Filter>Classi\h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Installer.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="InstallerDlg.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceSystem.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderDlg.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="unzip.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceCheckVersion.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceExecuteCommand.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceInstall.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicePath.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceRegistry.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceResource.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceString.cpp">
+      <Filter>Services\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="StringPath.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobVar.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AppVersion.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FileFolderGroup.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ReturnValue.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="IniParser.cpp">
+      <Filter>Classi\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Installer.rc">
+      <Filter>File di risorse</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Installer.rc2">
+      <Filter>File di risorse</Filter>
+    </None>
+    <None Include="..\Temp.zip" />
+    <None Include="..\..\..\..\Source\Repos\InstallerDotNet\Install.zip" />
+    <None Include="..\..\..\..\Source\Repos\InstallerDotNet\dotNetFx45_Full_setup.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Installer.ico">
+      <Filter>File di risorse</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
