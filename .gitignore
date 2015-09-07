@@ -30,3 +30,10 @@
 
 *.aps
 /Installer/Install.zip
+*.sdf
+*.pdb
+*.idb
+*.opensdf
+/Installer/Installer/Debug/Installer.tlog
+/Installer/Debug
+/Installer/Installer/Debug
