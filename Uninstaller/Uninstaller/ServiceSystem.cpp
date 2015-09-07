@@ -132,30 +132,32 @@ FileFolderGroup ServiceSystem::SecureRemoveDirectory(String path)
 }
 void ServiceSystem::SecureRemoveDirectoryForce(String path)
 {
-
-	if (PathIsDirectory(path.lpcwstr()))
+	do
 	{
-		DIR *dir;
-		struct dirent *ent;
-		if ((dir = opendir(path.lpcstr())) != NULL) 
+		if (PathIsDirectory(path.lpcwstr()))
 		{
-			while ((ent = readdir(dir)) != NULL) 
+			DIR *dir;
+			struct dirent *ent;
+			if ((dir = opendir(path.lpcstr())) != NULL)
 			{
-				String s = ent->d_name;
-				if (s != "." && s != "..")
+				while ((ent = readdir(dir)) != NULL)
 				{
-					String t = ServicePath::ComprimePath(path, s);
-					if (PathIsDirectory(t.lpcwstr()))
-						SecureRemoveDirectory(t);
+					String s = ent->d_name;
+					if (s != "." && s != "..")
+					{
+						String t = ServicePath::ComprimePath(path, s);
+						if (PathIsDirectory(t.lpcwstr()))
+							SecureRemoveDirectoryForce(t);
 
-					else
-						while (!DeleteFile(t.lpcwstr()));
+						else
+							DeleteFile(t.lpcwstr());
+					}
 				}
+				closedir(dir);
+				RemoveDirectory(path.lpcwstr());
 			}
-			closedir(dir);
-			while (!RemoveDirectory(path.lpcwstr()));
 		}
-	}
+	} while (PathFileExists(path.lpcwstr()));
 
 }
 

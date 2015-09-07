@@ -81,8 +81,11 @@ void ServiceUninstall::Uninstall()
 	if (dialog)
 		UninstallingScene();
 
+	if (dialog)
+		SetDlgItemText(dialog->m_hWnd, IDC_STATIC2, _T("Chiusura Programmi"));
 	for each (String f in ip->ListaKillProcess)
 	{
+		
 		ServiceSystem::killProcessByName(f);
 	}
 
@@ -107,17 +110,22 @@ void ServiceUninstall::Uninstall()
 
 		for each (String f in ut->ListaFileDaCancellare)
 		{	
-
+			
 			StringPath file = *ReplaceVariable(f).Trim();
 			file.ResolveEnviromentPath();
 			file.RemoveDuplicateSlash();
+			if (dialog)
+				SetDlgItemText(dialog->m_hWnd, IDC_STATIC2, file.GetFileName().lpcwstr());
 			ServiceSystem::SecureDeleteFileForce(file);
+
 		}
 		for each (String f in ut->ListaCartelleDaCancellare)
 		{
 			StringPath file = *ReplaceVariable(f).Trim();
 			file.ResolveEnviromentPath();
 			file.RemoveDuplicateSlash();
+			if (dialog)
+				SetDlgItemText(dialog->m_hWnd, IDC_STATIC2, file.lpcwstr());
 			ServiceSystem::SecureRemoveDirectoryForce(file);
 		}
 	
