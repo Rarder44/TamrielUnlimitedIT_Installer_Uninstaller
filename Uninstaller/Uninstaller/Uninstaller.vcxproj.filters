@@ -179,5 +179,8 @@
     <Image Include="res\Uninstaller.ico">
       <Filter>File di risorse</Filter>
     </Image>
+    <Image Include="res\ico.ico">
+      <Filter>File di risorse</Filter>
+    </Image>
   </ItemGroup>
 </Project>

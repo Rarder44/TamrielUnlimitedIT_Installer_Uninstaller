@@ -40,3 +40,7 @@
 /Uninstaller/Uninstaller/x64/Release
 *.ipdb
 *.iobj
+/Uninstaller/Debug
+*.ipch
+/Uninstaller/Uninstaller/Debug/Uninstaller.tlog
+/Uninstaller/Uninstaller/Debug
